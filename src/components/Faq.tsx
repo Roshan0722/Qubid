@@ -87,10 +87,10 @@ export default function Faq() {
   const items = DATA[tab];
 
   return (
-    <section className="border-b border-hair bg-white py-16 sm:py-20 lg:py-24">
+    <section id="faq" className="scroll-mt-24 border-b border-hair bg-white py-16 sm:py-20 lg:py-24">
       <Container>
         <SectionHead eyebrow="FAQ">
-          Questions, <G>answered</G>
+          Answers to your <G>questions</G>
         </SectionHead>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[210px_minmax(0,1fr)] lg:gap-14">

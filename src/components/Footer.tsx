@@ -1,47 +1,13 @@
 import { Container, Logo } from "./ui";
 import Reveal from "./Reveal";
 
-const COLS: { title: string; links: string[] }[] = [
-  {
-    title: "Product",
-    links: ["Tender Radar", "Proposal Studio", "Deadline Tracking", "Integrations", "Pricing"],
-  },
-  {
-    title: "Solutions",
-    links: ["Construction", "Technology", "Healthcare", "Facilities", "Professional Services"],
-  },
-  {
-    title: "Resources",
-    links: ["Guides", "Bid templates", "Procurement Act hub", "Webinars", "Help centre"],
-  },
-  {
-    title: "Company",
-    links: ["Why Qubid", "About", "Careers", "Customers", "Contact"],
-  },
-  {
-    title: "Legal",
-    links: ["Privacy", "Terms", "Security", "DPA", "Accessibility"],
-  },
+const LINKS = [
+  { label: "Platform", href: "#platform" },
+  { label: "Capabilities", href: "#capabilities" },
+  { label: "How it Works", href: "#how-it-works" },
+  { label: "Resources", href: "#resources" },
+  { label: "FAQ", href: "#faq" },
 ];
-
-const ROUTES: Record<string, string> = {
-  "Why Qubid": "#/why-qubid",
-  "Tender Radar": "#/product",
-  "Proposal Studio": "#/product",
-  "Deadline Tracking": "#/product",
-  Integrations: "#/product",
-  Pricing: "#/pricing",
-  Construction: "#/solutions",
-  Technology: "#/solutions",
-  Healthcare: "#/solutions",
-  Facilities: "#/solutions",
-  "Professional Services": "#/solutions",
-  Guides: "#/resources",
-  "Bid templates": "#/resources",
-  "Procurement Act hub": "#/resources",
-  Webinars: "#/resources",
-  "Help centre": "#/resources",
-};
 
 const SOCIALS = [
   {
@@ -62,27 +28,17 @@ export default function Footer() {
   return (
     <footer className="border-t border-hair bg-bgalt">
       <Container className="py-14 sm:py-16">
-        <div className="grid gap-9 sm:grid-cols-2 lg:grid-cols-5">
-          {COLS.map((c, i) => (
-            <Reveal key={c.title} delay={i * 70} variant="fade">
-              <h4 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-navy">
-                {c.title}
-              </h4>
-              <ul className="mt-4 space-y-2.5">
-                {c.links.map((l) => (
-                  <li key={l}>
-                    <a
-                      href={ROUTES[l] ?? "#/"}
-                      className="text-[13.5px] text-ink/75 transition-colors hover:text-green"
-                    >
-                      {l}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
+        <Reveal variant="fade" className="flex flex-wrap items-center gap-x-7 gap-y-3">
+          {LINKS.map((l) => (
+            <a
+              key={l.label}
+              href={l.href}
+              className="text-[13.5px] font-medium text-ink/75 transition-colors hover:text-green"
+            >
+              {l.label}
+            </a>
           ))}
-        </div>
+        </Reveal>
 
         <Reveal
           variant="fade"

@@ -24,7 +24,7 @@ const POSTS = [
 
 export default function Resources() {
   return (
-    <section className="border-b border-hair bg-white py-16 sm:py-20 lg:py-24">
+    <section id="resources" className="scroll-mt-24 border-b border-hair bg-white py-16 sm:py-20 lg:py-24">
       <Container>
         <SectionHead eyebrow="Resources">
           Guidance from the <G>bid desk</G>

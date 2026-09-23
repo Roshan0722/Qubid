@@ -199,51 +199,46 @@ export function SearchCard() {
     { t: "Data & Analytics Platform", b: "Ministry of Defence", m: "82% Match" },
   ];
   return (
-    <div className="overflow-hidden rounded-xl bg-navy p-3.5 lift">
-      <div className="flex items-center gap-1.5">
-        <span className="mock-cell h-1.5 w-1.5 rounded-full bg-white/30" style={{ animationDelay: "60ms" }} />
-        <span className="mock-cell h-1.5 w-1.5 rounded-full bg-white/30" style={{ animationDelay: "120ms" }} />
-        <span className="mock-cell h-1.5 w-1.5 rounded-full bg-white/30" style={{ animationDelay: "180ms" }} />
-        <span className="ml-1 min-w-0 flex-1 truncate text-[8.5px] font-semibold uppercase tracking-[0.06em] text-white/75">
-          Find &amp; match tenders
-        </span>
-      </div>
+    <div className="overflow-hidden rounded-xl border border-hair bg-white lift">
+      <Chrome label="Find & match tenders" tone="navy" flush />
 
-      <div className="mock-row mt-3 mb-2.5 flex items-center justify-between gap-2 rounded-md bg-white/10 px-2.5 py-1.5 ring-1 ring-inset ring-white/15">
-        <span className="flex min-w-0 items-center gap-2">
-          <svg viewBox="0 0 16 16" className="h-3.5 w-3.5 shrink-0 text-white/50" fill="none">
-            <circle cx="7" cy="7" r="4.5" stroke="currentColor" strokeWidth="1.4" />
-            <path d="M10.5 10.5L14 14" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-          </svg>
-          <span className="truncate text-[11px] text-white/50">Search tenders...</span>
-        </span>
-        <span
-          style={{ animationDelay: "900ms" }}
-          className="mock-cell shrink-0 rounded-full bg-green px-2 py-[2px] text-[9px] font-semibold text-white"
-        >
-          12 new
-        </span>
-      </div>
-
-      <div className="space-y-1.5">
-        {rows.map((r, i) => (
-          <div
-            key={r.t}
-            style={{ animationDelay: `${200 + i * 120}ms` }}
-            className="mock-row flex items-center justify-between gap-3 rounded-md bg-white px-2.5 py-2 transition-transform duration-300 hover:translate-x-0.5"
+      <div className="p-3.5">
+        <div className="mock-row flex items-center justify-between gap-2 rounded-md border border-hair bg-bgalt px-2.5 py-1.5">
+          <span className="flex min-w-0 items-center gap-2">
+            <svg viewBox="0 0 16 16" className="h-3.5 w-3.5 shrink-0 text-ink/40" fill="none">
+              <circle cx="7" cy="7" r="4.5" stroke="currentColor" strokeWidth="1.4" />
+              <path d="M10.5 10.5L14 14" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+            </svg>
+            <span className="truncate text-[11px] text-ink/45">Search tenders...</span>
+          </span>
+          <span
+            style={{ animationDelay: "900ms" }}
+            className="mock-cell shrink-0 rounded-full bg-green px-2 py-[2px] text-[9px] font-semibold text-white"
           >
-            <div className="min-w-0">
-              <p className="truncate text-[11.5px] font-medium text-navy">{r.t}</p>
-              <p className="truncate text-[10px] text-ink/55">{r.b}</p>
-            </div>
-            <span
-              style={{ animationDelay: `${460 + i * 120}ms` }}
-              className="mock-cell shrink-0 rounded-full bg-green/10 px-2 py-0.5 text-[9.5px] font-semibold text-green"
+            12 new
+          </span>
+        </div>
+
+        <div className="mt-2.5 space-y-1.5">
+          {rows.map((r, i) => (
+            <div
+              key={r.t}
+              style={{ animationDelay: `${200 + i * 120}ms` }}
+              className="mock-row flex items-center justify-between gap-3 rounded-md border border-hair px-2.5 py-2 transition-[border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-[#cfd9df]"
             >
-              {r.m}
-            </span>
-          </div>
-        ))}
+              <div className="min-w-0">
+                <p className="truncate text-[11.5px] font-medium text-navy">{r.t}</p>
+                <p className="truncate text-[10px] text-ink/55">{r.b}</p>
+              </div>
+              <span
+                style={{ animationDelay: `${460 + i * 120}ms` }}
+                className="mock-cell shrink-0 rounded-full bg-green/10 px-2 py-0.5 text-[9.5px] font-semibold text-green"
+              >
+                {r.m}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -302,45 +297,47 @@ export function UploadCard() {
 
 export function ProposalReadyCard() {
   return (
-    <div className="overflow-hidden rounded-xl border border-hair bg-white lift">
-      <Chrome label="Generate winning proposal" tone="navy" flush />
+    <div className="overflow-hidden rounded-xl bg-navy p-3.5 lift">
+      <div className="flex items-center gap-1.5">
+        <span className="mock-cell h-1.5 w-1.5 rounded-full bg-white/30" style={{ animationDelay: "60ms" }} />
+        <span className="mock-cell h-1.5 w-1.5 rounded-full bg-white/30" style={{ animationDelay: "120ms" }} />
+        <span className="mock-cell h-1.5 w-1.5 rounded-full bg-white/30" style={{ animationDelay: "180ms" }} />
+        <span className="ml-1 min-w-0 flex-1 truncate text-[8.5px] font-semibold uppercase tracking-[0.06em] text-white/75">
+          Generate winning proposal
+        </span>
+      </div>
 
-      <div className="p-3.5">
-        <p className="mock-row text-[9.5px] leading-relaxed text-ink/70" style={{ animationDelay: "140ms" }}>
-          Let AI create compliant, high-quality proposals tailored to the tender requirements.
-        </p>
+      <p className="mock-row mt-3 text-[9.5px] leading-relaxed text-white/70" style={{ animationDelay: "140ms" }}>
+        Let AI create compliant, high-quality proposals tailored to the tender requirements.
+      </p>
 
-        <div
-          className="mock-pop mt-3 rounded-lg border border-hair bg-bgalt/60 p-3"
-          style={{ animationDelay: "300ms" }}
-        >
-          <img src={logoUrl} alt="" className="h-3.5 w-auto" />
-          <p className="mt-2 text-[10px] font-semibold text-navy">Winning Proposal</p>
-          <div className="mt-2 space-y-1">
-            <div className="h-[3px] w-[75%] rounded-full bg-[#DCE3E7]" />
-            <div className="h-[3px] w-[58%] rounded-full bg-[#DCE3E7]" />
-          </div>
-          <div className="mt-2.5 flex items-center justify-between gap-2">
-            <span
-              style={{ animationDelay: "560ms" }}
-              className="mock-cell inline-flex shrink-0 items-center gap-1 rounded-full bg-green/10 px-2 py-[3px] text-[8.5px] font-semibold text-green"
-            >
-              <svg viewBox="0 0 16 16" className="h-3 w-3 shrink-0" fill="none" aria-hidden>
-                <circle cx="8" cy="8" r="8" fill="#0aa34a" />
-                <path
-                  d="M4.5 8.2l2.2 2.2 4.6-4.6"
-                  stroke="#fff"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              Approved
-            </span>
-            <span className="truncate text-[8.5px] font-medium italic text-green/80">
-              Save time. Increase win rate.
-            </span>
-          </div>
+      <div className="mock-pop mt-3 rounded-lg bg-white p-3" style={{ animationDelay: "300ms" }}>
+        <img src={logoUrl} alt="" className="h-3.5 w-auto" />
+        <p className="mt-2 text-[10px] font-semibold text-navy">Winning Proposal</p>
+        <div className="mt-2 space-y-1">
+          <div className="h-[3px] w-[75%] rounded-full bg-[#DCE3E7]" />
+          <div className="h-[3px] w-[58%] rounded-full bg-[#DCE3E7]" />
+        </div>
+        <div className="mt-2.5 flex items-center justify-between gap-2">
+          <span
+            style={{ animationDelay: "560ms" }}
+            className="mock-cell inline-flex shrink-0 items-center gap-1 rounded-full bg-green/10 px-2 py-[3px] text-[8.5px] font-semibold text-green"
+          >
+            <svg viewBox="0 0 16 16" className="h-3 w-3 shrink-0" fill="none" aria-hidden>
+              <circle cx="8" cy="8" r="8" fill="#0aa34a" />
+              <path
+                d="M4.5 8.2l2.2 2.2 4.6-4.6"
+                stroke="#fff"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Approved
+          </span>
+          <span className="truncate text-[8.5px] font-medium italic text-green/80">
+            Save time. Increase win rate.
+          </span>
         </div>
       </div>
     </div>
@@ -529,31 +526,61 @@ export function ShotWide() {
   );
 }
 
-const RESULTS = [
+const TENDER = {
+  t: "Cyber Security Audit & Assurance Services",
+  org: "Ministry of Defence",
+  value: "£680,000",
+  location: "UK",
+  due: "Due 14 Mar 2026",
+  daysLeft: "21 days left",
+};
+const MATCH_TARGET = 94;
+
+const PROFILE_FIELDS = [
   {
-    t: "Digital Transformation Services",
-    org: "UK Government",
-    value: "£250k – £500k",
-    match: 92,
-    closes: "Closes in 12 days",
+    t: "Company information",
+    icon: (
+      <path
+        d="M3.5 2.5h6v11h-6v-11zM9.5 6l3.5 2v5.5h-3.5M5.5 5h2M5.5 7.5h2M5.5 10h2"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    ),
   },
   {
-    t: "IT Infrastructure Framework",
-    org: "Public Sector",
-    value: "£1.2m",
-    match: 87,
-    closes: "Closes in 18 days",
+    t: "Financial details",
+    icon: (
+      <path
+        d="M4 2.5h5.5l3 3v8H4v-11zM9.5 2.5v3h3M6 8.5h4M6 10.5h4"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    ),
+  },
+  {
+    t: "Certifications",
+    icon: (
+      <path
+        d="M8 2l4.5 1.8V7c0 3.2-2 5.3-4.5 6-2.5-.7-4.5-2.8-4.5-6V3.8L8 2z"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinejoin="round"
+      />
+    ),
   },
 ];
-const SEARCH_QUERY = "Digital transformation";
 
 export function ProductPreview() {
   const reduceMotion = usePrefersReducedMotion();
-  const [phase, setPhase] = useState<"type" | "search" | "results">(
-    reduceMotion ? "results" : "type",
+  const [phase, setPhase] = useState<"profile" | "processing" | "results">(
+    reduceMotion ? "results" : "profile",
   );
-  const [typed, setTyped] = useState(reduceMotion ? SEARCH_QUERY : "");
-  const [pct, setPct] = useState(reduceMotion ? RESULTS.map((r) => r.match) : [0, 0]);
+  const [filled, setFilled] = useState(reduceMotion ? PROFILE_FIELDS.length : 0);
+  const [matchPct, setMatchPct] = useState(reduceMotion ? MATCH_TARGET : 0);
 
   useEffect(() => {
     if (reduceMotion) return;
@@ -565,36 +592,35 @@ export function ProductPreview() {
       timers.push(window.setTimeout(() => !cancelled && fn(), ms));
     };
 
-    const countUp = () => {
+    const countTo = (target: number, setter: (n: number) => void, duration: number) => {
       const start = performance.now();
-      const duration = 750;
       const tick = (now: number) => {
         if (cancelled) return;
         const p = Math.min(1, (now - start) / duration);
-        setPct(RESULTS.map((r) => Math.round(r.match * p)));
+        setter(Math.round(target * p));
         if (p < 1) raf = requestAnimationFrame(tick);
       };
       raf = requestAnimationFrame(tick);
     };
 
     const runCycle = () => {
-      setPhase("type");
-      setTyped("");
-      setPct([0, 0]);
+      setPhase("profile");
+      setFilled(0);
+      setMatchPct(0);
 
-      for (let i = 1; i <= SEARCH_QUERY.length; i++) {
-        after(() => setTyped(SEARCH_QUERY.slice(0, i)), i * 75);
-      }
-      const typingDone = SEARCH_QUERY.length * 75 + 500;
-      after(() => setPhase("search"), typingDone);
+      PROFILE_FIELDS.forEach((_, i) => {
+        after(() => setFilled(i + 1), 500 + i * 550);
+      });
+      const profileDone = 500 + PROFILE_FIELDS.length * 550 + 900;
+      after(() => setPhase("processing"), profileDone);
 
-      const searchDone = typingDone + 1700;
+      const processingDone = profileDone + 2000;
       after(() => {
         setPhase("results");
-        countUp();
-      }, searchDone);
+        countTo(MATCH_TARGET, setMatchPct, 700);
+      }, processingDone);
 
-      after(runCycle, searchDone + 4500);
+      after(runCycle, processingDone + 4200);
     };
 
     runCycle();
@@ -604,6 +630,8 @@ export function ProductPreview() {
       timers.forEach(clearTimeout);
     };
   }, [reduceMotion]);
+
+  const profileReady = filled === PROFILE_FIELDS.length;
 
   return (
     <div className="overflow-hidden rounded-xl border border-hair bg-white lift">
@@ -616,37 +644,91 @@ export function ProductPreview() {
       </div>
 
       <div className="p-4 sm:p-5">
-        <p className="mock-row text-[15px] font-semibold text-navy" style={{ animationDelay: "120ms" }}>
-          Find tenders matched to your business
-        </p>
+        <div className="flex items-center justify-between gap-3">
+          <p className="text-[13px] font-semibold text-navy">Company profile</p>
+          <p className="text-[10.5px] text-ink/50">{filled}/{PROFILE_FIELDS.length} complete</p>
+        </div>
 
-        <div
-          className="mock-row mt-3.5 flex items-center gap-2 rounded-md border border-hair bg-bgalt px-3 py-2.5"
-          style={{ animationDelay: "220ms" }}
-        >
-          <svg viewBox="0 0 16 16" className="h-3.5 w-3.5 shrink-0 text-ink/40" fill="none">
-            <circle cx="7" cy="7" r="4.5" stroke="currentColor" strokeWidth="1.4" />
-            <path d="M10.5 10.5L14 14" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-          </svg>
-          {typed ? (
-            <span className="text-[12.5px] text-navy">
-              {typed}
-              {phase === "type" && <span className="animate-pulse">|</span>}
-            </span>
-          ) : (
-            <span className="text-[12.5px] text-ink/45">Search tenders...</span>
+        <div className="mt-2.5 space-y-1.5">
+          {PROFILE_FIELDS.map((f, i) => (
+            <div
+              key={f.t}
+              className="flex items-center gap-2 rounded-md border border-hair px-2.5 py-1.5"
+            >
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded bg-bgalt text-navy">
+                <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="none" aria-hidden>
+                  {f.icon}
+                </svg>
+              </span>
+              <span className="flex-1 text-[11px] font-medium text-navy">{f.t}</span>
+              <svg
+                viewBox="0 0 16 16"
+                className={cn(
+                  "h-3.5 w-3.5 shrink-0 transition-all duration-300",
+                  i < filled ? "scale-100 opacity-100" : "scale-50 opacity-0",
+                )}
+                fill="none"
+                aria-hidden
+              >
+                <circle cx="8" cy="8" r="8" fill="#0aa34a" />
+                <path
+                  d="M4.5 8.2l2.2 2.2 4.6-4.6"
+                  stroke="#fff"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-3.5 flex items-center gap-2">
+          <div
+            className={cn(
+              "flex flex-1 items-center justify-center gap-2 rounded-md py-2.5 text-[12px] font-semibold text-white transition-colors duration-300",
+              phase === "processing"
+                ? "bg-green/55"
+                : profileReady
+                  ? "bg-green"
+                  : "bg-green/35",
+            )}
+          >
+            {phase === "processing" ? (
+              <>
+                <svg viewBox="0 0 16 16" className="h-3.5 w-3.5 shrink-0 animate-spin" fill="none">
+                  <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="2" strokeOpacity="0.35" />
+                  <path d="M14 8a6 6 0 00-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                </svg>
+                Processing…
+              </>
+            ) : (
+              <>
+                <svg viewBox="0 0 16 16" className="h-3.5 w-3.5 shrink-0" fill="none">
+                  <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1.4" />
+                  <circle cx="8" cy="8" r="2.4" fill="currentColor" />
+                </svg>
+                Match Tenders
+              </>
+            )}
+          </div>
+          {phase === "processing" && (
+            <div className="mock-pop flex shrink-0 items-center justify-center gap-1.5 rounded-md bg-[#e0453d] px-3 py-2.5 text-[11px] font-semibold text-white">
+              <svg viewBox="0 0 16 16" className="h-3 w-3 shrink-0" fill="none">
+                <circle cx="8" cy="8" r="6.2" stroke="currentColor" strokeWidth="1.4" />
+                <rect x="6" y="6" width="4" height="4" fill="currentColor" />
+              </svg>
+              Stop
+            </div>
           )}
         </div>
 
-        <div className="mock-row mt-5 flex items-center gap-2" style={{ animationDelay: "300ms" }}>
-          {phase === "search" ? (
+        <div className="mt-3.5 flex items-center gap-2">
+          {phase === "processing" ? (
             <>
-              <svg viewBox="0 0 16 16" className="h-3 w-3 shrink-0 animate-spin text-navy/50" fill="none">
-                <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="2" strokeOpacity="0.25" />
-                <path d="M14 8a6 6 0 00-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              </svg>
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-navy/40" />
               <span className="text-[10.5px] font-semibold uppercase tracking-[0.12em] text-ink/45">
-                Searching 6 UK portals…
+                Matching against your profile…
               </span>
             </>
           ) : (
@@ -658,43 +740,166 @@ export function ProductPreview() {
                 )}
               />
               <span className="text-[10.5px] font-semibold uppercase tracking-[0.12em] text-ink/45">
-                {phase === "results" ? `${RESULTS.length} matches found` : "Recommended for you"}
+                {phase === "results" ? "1 tender matched" : "Complete your profile to start matching"}
               </span>
             </>
           )}
         </div>
 
-        <div className="mt-2.5 space-y-2.5">
-          {RESULTS.map((r, i) => (
-            <div
-              key={r.t}
-              style={{ animationDelay: `${380 + i * 160}ms` }}
-              className="mock-row rounded-lg border border-hair p-3 transition-[border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-[#cfd9df]"
-            >
-              {phase === "results" ? (
-                <>
-                  <p className="text-[12.5px] font-semibold text-navy">{r.t}</p>
-                  <p className="mt-1 text-[11px] text-ink/55">{r.org}</p>
-                  <p className="mt-0.5 text-[11px] text-ink/55">{r.value}</p>
-                  <div className="mt-2.5 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 border-t border-hair pt-2.5">
-                    <span className="flex items-center gap-1.5 text-[11px] font-semibold text-green">
-                      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-green" />
-                      {pct[i]}% Match
-                    </span>
-                    <span className="text-[10.5px] text-ink/50">{r.closes}</span>
-                  </div>
-                </>
-              ) : (
-                <div className="space-y-2 py-0.5">
-                  <div className="h-[9px] w-[70%] rounded-full bg-[#E8EDF0]" />
-                  <div className="h-[8px] w-[42%] rounded-full bg-[#EEF2F4]" />
-                  <div className="h-[8px] w-[30%] rounded-full bg-[#EEF2F4]" />
-                  <div className="mt-1.5 h-[8px] w-[55%] rounded-full bg-[#EEF2F4]" />
+        <div className="mt-2.5 rounded-lg border border-hair p-3 transition-[border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-[#cfd9df]">
+          {phase === "results" ? (
+            <>
+              <p className="text-[12.5px] font-semibold text-navy">{TENDER.t}</p>
+              <p className="mt-1 text-[11px] text-ink/55">{TENDER.org}</p>
+              <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10.5px] text-ink/55">
+                <span>{TENDER.value}</span>
+                <span>{TENDER.location}</span>
+                <span>{TENDER.due}</span>
+              </div>
+              <div className="mt-2.5 border-t border-hair pt-2.5">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-[11px] font-semibold text-green">{matchPct}% Match Score</span>
+                  <span className="text-[10.5px] text-ink/50">{TENDER.daysLeft}</span>
                 </div>
-              )}
+                <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-[#E8EDF0]">
+                  <div
+                    className="h-full rounded-full bg-green transition-[width] duration-300"
+                    style={{ width: `${matchPct}%` }}
+                  />
+                </div>
+              </div>
+            </>
+          ) : (
+            <div className="space-y-2 py-0.5">
+              <div className="h-[9px] w-[75%] rounded-full bg-[#E8EDF0]" />
+              <div className="h-[8px] w-[45%] rounded-full bg-[#EEF2F4]" />
+              <div className="mt-1.5 h-[8px] w-[60%] rounded-full bg-[#EEF2F4]" />
+              <div className="mt-1.5 h-[6px] w-full rounded-full bg-[#EEF2F4]" />
             </div>
-          ))}
+          )}
         </div>
+      </div>
+    </div>
+  );
+}
+
+const SETUP_STEPS = [
+  "Connecting to UK tender portals",
+  "Importing your company profile",
+  "Turning on daily match alerts",
+];
+
+export function WorkspaceSetupPreview() {
+  const reduceMotion = usePrefersReducedMotion();
+  const [phase, setPhase] = useState<"setup" | "ready">(reduceMotion ? "ready" : "setup");
+  const [done, setDone] = useState(reduceMotion ? SETUP_STEPS.length : 0);
+
+  useEffect(() => {
+    if (reduceMotion) return;
+
+    let cancelled = false;
+    const timers: number[] = [];
+    const after = (fn: () => void, ms: number) => {
+      timers.push(window.setTimeout(() => !cancelled && fn(), ms));
+    };
+
+    const runCycle = () => {
+      setPhase("setup");
+      setDone(0);
+
+      SETUP_STEPS.forEach((_, i) => {
+        after(() => setDone(i + 1), 700 + i * 750);
+      });
+      const setupDone = 700 + SETUP_STEPS.length * 750 + 900;
+      after(() => setPhase("ready"), setupDone);
+
+      after(runCycle, setupDone + 4200);
+    };
+
+    runCycle();
+    return () => {
+      cancelled = true;
+      timers.forEach(clearTimeout);
+    };
+  }, [reduceMotion]);
+
+  return (
+    <div className="overflow-hidden rounded-xl border border-hair bg-white lift">
+      <div className="flex items-center justify-between border-b border-hair px-4 py-3 sm:px-5">
+        <span className="text-[14px] font-semibold text-navy">Qubid</span>
+        <span
+          className={cn(
+            "rounded-full px-2 py-[3px] text-[9px] font-semibold uppercase tracking-[0.1em] transition-colors duration-300",
+            phase === "ready" ? "bg-green/10 text-green" : "bg-bgalt text-ink/50",
+          )}
+        >
+          {phase === "ready" ? "Ready" : "Setting up"}
+        </span>
+      </div>
+
+      <div className="p-4 sm:p-5">
+        {phase === "setup" ? (
+          <>
+            <div className="flex items-center gap-2">
+              <svg viewBox="0 0 16 16" className="h-3.5 w-3.5 shrink-0 animate-spin text-navy/50" fill="none">
+                <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="2" strokeOpacity="0.25" />
+                <path d="M14 8a6 6 0 00-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+              <span className="text-[10.5px] font-semibold uppercase tracking-[0.12em] text-ink/45">
+                Setting up your workspace…
+              </span>
+            </div>
+
+            <div className="mt-3.5 space-y-1.5">
+              {SETUP_STEPS.map((step, i) => (
+                <div
+                  key={step}
+                  className="flex items-center gap-2.5 rounded-md border border-hair px-2.5 py-2"
+                >
+                  <span className="flex-1 text-[11px] font-medium text-navy">{step}</span>
+                  {i < done ? (
+                    <svg viewBox="0 0 16 16" className="h-3.5 w-3.5 shrink-0" fill="none" aria-hidden>
+                      <circle cx="8" cy="8" r="8" fill="#0aa34a" />
+                      <path
+                        d="M4.5 8.2l2.2 2.2 4.6-4.6"
+                        stroke="#fff"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  ) : i === done ? (
+                    <svg viewBox="0 0 16 16" className="h-3.5 w-3.5 shrink-0 animate-spin text-navy/40" fill="none">
+                      <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="2" strokeOpacity="0.25" />
+                      <path d="M14 8a6 6 0 00-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                    </svg>
+                  ) : (
+                    <span className="h-3.5 w-3.5 shrink-0 rounded-full border border-hair" />
+                  )}
+                </div>
+              ))}
+            </div>
+          </>
+        ) : (
+          <div className="mock-pop py-1 text-center">
+            <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-green/10">
+              <svg viewBox="0 0 16 16" className="h-6 w-6" fill="none" aria-hidden>
+                <circle cx="8" cy="8" r="8" fill="#0aa34a" />
+                <path
+                  d="M4.5 8.2l2.2 2.2 4.6-4.6"
+                  stroke="#fff"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+            <p className="mt-3 text-[14px] font-semibold text-navy">You're all set</p>
+            <p className="mx-auto mt-1 max-w-[220px] text-[11.5px] leading-relaxed text-ink/55">
+              128 live tenders are already scored against your profile.
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

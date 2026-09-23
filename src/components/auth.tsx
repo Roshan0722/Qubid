@@ -1,7 +1,7 @@
 import { useState, type InputHTMLAttributes, type ReactNode } from "react";
 import { Btn, Check, Container, Eyebrow } from "./ui";
 import Reveal from "./Reveal";
-import { LineArt } from "./mockups";
+import { WorkspaceSetupPreview } from "./mockups";
 import { cn } from "../utils/cn";
 
 /* ---------------- shell ---------------- */
@@ -73,8 +73,8 @@ export function AuthShell({
                 ))}
               </ul>
             </div>
-            <div className="mt-10 opacity-90">
-              <LineArt />
+            <div className="mt-10">
+              <WorkspaceSetupPreview />
             </div>
           </Reveal>
         </div>

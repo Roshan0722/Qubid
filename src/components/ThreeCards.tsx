@@ -25,7 +25,7 @@ const CARDS = [
 
 export default function ThreeCards() {
   return (
-    <section className="border-b border-hair bg-white py-16 sm:py-20 lg:py-24">
+    <section id="capabilities" className="scroll-mt-24 border-b border-hair bg-white py-16 sm:py-20 lg:py-24">
       <Container>
         <SectionHead eyebrow="Capabilities">
           Built for how bids <G>actually get won</G>

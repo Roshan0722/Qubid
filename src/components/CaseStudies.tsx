@@ -106,7 +106,9 @@ export default function CaseStudies() {
                   </p>
                   <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-white/20 pt-4">
                     <span className="text-[13px] font-medium text-white">{it.person}</span>
-                    <span className="text-[12.5px] text-green">{it.stat}</span>
+                    <span className="rounded-full bg-green px-2.5 py-[3px] text-[11.5px] font-semibold text-white">
+                      {it.stat}
+                    </span>
                   </div>
                 </div>
 
@@ -122,9 +124,6 @@ export default function CaseStudies() {
                     style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
                   >
                     {it.label}
-                  </span>
-                  <span className="absolute bottom-5 text-[11px] font-semibold text-ink/35">
-                    0{i + 1}
                   </span>
                  </div>
                 </button>

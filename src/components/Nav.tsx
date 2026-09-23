@@ -3,11 +3,11 @@ import { Btn, Logo } from "./ui";
 import { cn } from "../utils/cn";
 
 const LINKS = [
-  { label: "Why Qubid", href: "#/why-qubid" },
-  { label: "Product", href: "#/product" },
-  { label: "Solutions", href: "#/solutions" },
-  { label: "Resources", href: "#/resources" },
-  { label: "Pricing", href: "#/pricing" },
+  { label: "Platform", href: "#platform" },
+  { label: "Capabilities", href: "#capabilities" },
+  { label: "How it Works", href: "#how-it-works" },
+  { label: "Resources", href: "#resources" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Nav({ route = "/" }: { route?: string }) {

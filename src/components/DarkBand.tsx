@@ -22,7 +22,7 @@ const STEPS = [
 
 export default function DarkBand() {
   return (
-    <section className="bg-navy py-16 sm:py-20 lg:py-24">
+    <section id="how-it-works" className="scroll-mt-24 bg-navy py-16 sm:py-20 lg:py-24">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
@@ -41,17 +41,12 @@ export default function DarkBand() {
                   key={s.n}
                   as="li"
                   delay={180 + i * 130}
-                  className={`flex gap-5 py-5 ${i === 0 ? "border-t" : ""} border-b border-white/12`}
+                  className={`py-5 ${i === 0 ? "border-t" : ""} border-b border-white/12`}
                 >
-                  <span className="mt-0.5 text-[12px] font-semibold tracking-[0.1em] text-green">
-                    {s.n}
-                  </span>
-                  <div>
-                    <h3 className="text-[16px] text-white">{s.t}</h3>
-                    <p className="mt-1 max-w-[380px] text-[13.5px] leading-relaxed text-white/65">
-                      {s.d}
-                    </p>
-                  </div>
+                  <h3 className="text-[16px] text-white">{s.t}</h3>
+                  <p className="mt-1 max-w-[380px] text-[13.5px] leading-relaxed text-white/65">
+                    {s.d}
+                  </p>
                 </Reveal>
               ))}
             </ol>

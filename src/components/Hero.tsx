@@ -34,11 +34,11 @@ export default function Hero() {
               </div>
             </Reveal>
             <Reveal delay={330}>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-hair pt-5 text-[12.5px] text-ink/65">
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-lg bg-navy px-4 py-3.5 text-[12.5px] font-medium text-white">
                 <span>6 UK portals in one feed</span>
-                <span className="hidden h-3 w-px bg-hair sm:block" />
+                <span className="hidden h-3 w-px bg-white/20 sm:block" />
                 <span>ISO 27001 certified</span>
-                <span className="hidden h-3 w-px bg-hair sm:block" />
+                <span className="hidden h-3 w-px bg-white/20 sm:block" />
                 <span>UK data residency</span>
               </div>
             </Reveal>

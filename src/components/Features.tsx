@@ -19,7 +19,7 @@ const CARDS = [
 
 export default function Features() {
   return (
-    <section className="border-b border-hair bg-bgalt py-16 sm:py-20 lg:py-24">
+    <section id="platform" className="scroll-mt-24 border-b border-hair bg-bgalt py-16 sm:py-20 lg:py-24">
       <Container>
         <SectionHead
           eyebrow="The Platform"

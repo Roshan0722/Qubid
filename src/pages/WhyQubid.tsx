@@ -195,10 +195,7 @@ export default function WhyQubid() {
             {PROBLEMS.map((p, i) => (
               <Reveal key={p.n} delay={i * 120} variant="up" className="flex">
                 <article className="w-full rounded-xl border border-hair bg-white p-6 lift transition-[border-color,transform] duration-300 hover:-translate-y-1 hover:border-[#cfd9df]">
-                  <span className="text-[12px] font-semibold tracking-[0.1em] text-green">
-                    {p.n}
-                  </span>
-                  <h3 className="mt-4 text-[17px]">{p.t}</h3>
+                  <h3 className="text-[17px]">{p.t}</h3>
                   <p className="mt-2 text-[14px] leading-relaxed text-ink/80">{p.d}</p>
                 </article>
               </Reveal>
@@ -331,10 +328,7 @@ export default function WhyQubid() {
           <div className="mt-12 grid gap-px overflow-hidden rounded-xl bg-white/12 sm:grid-cols-2">
             {DIFFS.map((d, i) => (
               <Reveal key={d.n} variant="fade" delay={i * 130} as="article" className="bg-navy p-6 sm:p-8">
-                <span className="text-[12px] font-semibold tracking-[0.1em] text-green">
-                  {d.n}
-                </span>
-                <h3 className="mt-4 text-[17px] text-white">{d.t}</h3>
+                <h3 className="text-[17px] text-white">{d.t}</h3>
                 <p className="mt-2 max-w-[400px] text-[13.5px] leading-relaxed text-white/65">
                   {d.d}
                 </p>
