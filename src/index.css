@@ -1,0 +1,421 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0c2e64;
+  --color-navy-700: #15407d;
+  --color-navy-deep: #042151;
+  --color-teal: #0e5563;
+  --color-teal-deep: #0a4450;
+  --color-green: #0aa34a;
+  --color-green-deep: #137235;
+  --color-green-dark: #0a8a3e;
+  --color-ink: #3d4e5c;
+  --color-bgalt: #f4f7f8;
+  --color-hair: #e3e8eb;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--color-navy);
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: -0.015em;
+    line-height: 1.18;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+/* faint 1px card lift only */
+@utility lift {
+  box-shadow: 0 1px 2px 0 rgba(18, 56, 90, 0.05);
+}
+
+/* ---------------- motion ---------------- */
+
+:root {
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@keyframes rvUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rvFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rvLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-18px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rvRight {
+  from {
+    opacity: 0;
+    transform: translate3d(18px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rvPop {
+  from {
+    opacity: 0;
+    transform: scale(0.965);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes growX {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes growY {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes drawStroke {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes softPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.72);
+  }
+}
+
+@keyframes softFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes navDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* scroll reveal */
+.rv {
+  opacity: 0;
+  transition:
+    opacity 0.6s var(--ease),
+    transform 0.6s var(--ease);
+}
+.rv:not(.in) {
+  will-change: opacity, transform;
+}
+.rv-up {
+  transform: translate3d(0, 16px, 0);
+}
+.rv-left {
+  transform: translate3d(-18px, 0, 0);
+}
+.rv-right {
+  transform: translate3d(18px, 0, 0);
+}
+.rv-pop {
+  transform: scale(0.965);
+}
+.rv-none {
+  transform: none;
+}
+.rv.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* mobile: longer travel, vertical flow, so each block visibly arrives in turn */
+@media (max-width: 767px) {
+  .rv {
+    transition:
+      opacity 0.55s var(--ease),
+      transform 0.55s var(--ease);
+  }
+  .rv-up {
+    transform: translate3d(0, 26px, 0);
+  }
+  .rv-left,
+  .rv-right {
+    transform: translate3d(0, 26px, 0);
+  }
+  .rv-pop {
+    transform: translate3d(0, 22px, 0) scale(0.975);
+  }
+}
+
+/* mockup internals — driven by a parent carrying .in */
+.mock-row,
+.mock-line,
+.mock-cell,
+.mock-pop {
+  opacity: 0;
+}
+.mock-row.in,
+.mock-line.in,
+.mock-cell.in,
+.mock-pop.in {
+  opacity: 1;
+}
+.mock-line {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+.mock-bar {
+  transform: scaleY(0);
+  transform-origin: bottom center;
+}
+
+.in .mock-row,
+.mock-row.in {
+  animation: rvUp 0.55s var(--ease) both;
+}
+.in .mock-cell,
+.mock-cell.in {
+  animation: rvPop 0.42s var(--ease) both;
+}
+.in .mock-pop,
+.mock-pop.in {
+  animation: rvPop 0.5s var(--ease) both;
+}
+.in .mock-line,
+.mock-line.in {
+  animation: growX 0.7s var(--ease) both;
+}
+.in .mock-bar,
+.mock-bar.in {
+  animation: growY 0.8s var(--ease) both;
+}
+.in .pulse-dot,
+.in.pulse-dot {
+  animation: softPulse 2.4s ease-in-out infinite;
+}
+.in .soft-float,
+.in.soft-float {
+  animation: softFloat 7s ease-in-out infinite;
+}
+
+.la-draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+.in .la-draw {
+  animation: drawStroke 1.15s ease-out both;
+}
+.la-fill {
+  opacity: 0;
+}
+.in .la-fill {
+  animation: rvFade 0.9s ease-out both;
+}
+
+.nav-enter {
+  animation: navDrop 0.6s var(--ease) both;
+}
+.page-in {
+  animation: pageIn 0.45s var(--ease) both;
+}
+
+/* ---------------- capability card hover play ---------------- */
+
+@keyframes clockSweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes penWrite {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(2px, -1.5px) rotate(-7deg);
+  }
+  50% {
+    transform: translate(-1.5px, 1px) rotate(5deg);
+  }
+  75% {
+    transform: translate(1.5px, 1px) rotate(-4deg);
+  }
+}
+
+@keyframes penLine {
+  0%,
+  100% {
+    transform: scaleX(0.55);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 0.65;
+  }
+}
+
+@keyframes searchScan {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-14px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .group:hover .ill-clock-hand {
+    animation: clockSweep 2s linear infinite;
+  }
+  .group:hover .ill-pen {
+    animation: penWrite 0.6s ease-in-out infinite;
+  }
+  .group:hover .ill-pen-line {
+    animation: penLine 0.9s ease-in-out infinite;
+  }
+  .group:hover .ill-search-glass {
+    animation: searchScan 1.4s ease-in-out infinite;
+  }
+}
+
+/* ---------------- sharp corners ---------------- */
+/* unlayered so it wins over every rounded-* utility and inline radius */
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+}
+
+/* SVG shapes carry geometry attributes, so square them explicitly */
+svg rect,
+svg ellipse,
+svg image,
+svg path,
+svg g rect {
+  rx: 0;
+  ry: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rv,
+  .mock-row,
+  .mock-line,
+  .mock-cell,
+  .mock-pop,
+  .la-fill {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .mock-bar {
+    transform: none !important;
+  }
+  .la-draw {
+    stroke-dashoffset: 0 !important;
+  }
+  .rv,
+  .mock-row,
+  .mock-line,
+  .mock-cell,
+  .mock-pop,
+  .mock-bar,
+  .la-draw,
+  .la-fill,
+  .pulse-dot,
+  .soft-float,
+  .nav-enter,
+  .page-in {
+    animation: none !important;
+    transition: none !important;
+  }
+}
