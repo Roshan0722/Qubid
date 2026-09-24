@@ -1,4 +1,5 @@
 import Hero from "../components/Hero";
+import VisualMarquee from "../components/VisualMarquee";
 import Features from "../components/Features";
 import SourceStrip from "../components/SourceStrip";
 import ThreeCards from "../components/ThreeCards";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <VisualMarquee />
       <Features />
       <SourceStrip />
       <ThreeCards />

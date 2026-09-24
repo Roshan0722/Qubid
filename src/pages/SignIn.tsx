@@ -50,7 +50,7 @@ export default function SignIn() {
       eyebrow="Welcome back"
       title="Sign in to Qubid"
       subtitle="Pick up your tender feed, drafts and deadlines where you left off."
-      side="The bid desk for UK suppliers — one workspace from notice to submission."
+      side="The bid desk for UK suppliers  one workspace from notice to submission."
       footer={
         <p className="text-[13.5px] text-ink/75">
           New to Qubid?{" "}

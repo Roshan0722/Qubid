@@ -236,7 +236,7 @@
   }
 }
 
-/* mockup internals — driven by a parent carrying .in */
+/* mockup internals  driven by a parent carrying .in */
 .mock-row,
 .mock-line,
 .mock-cell,
@@ -306,6 +306,27 @@
 }
 .page-in {
   animation: pageIn 0.45s var(--ease) both;
+}
+
+/* ---------------- visual marquee ---------------- */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 26s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
 
 /* ---------------- capability card hover play ---------------- */

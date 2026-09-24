@@ -44,7 +44,7 @@ export default function Hero() {
             </Reveal>
           </div>
 
-          {/* right — asymmetric mosaic */}
+          {/* right  asymmetric mosaic */}
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
             <div className="space-y-3 sm:space-y-4 lg:pt-6">
               <Reveal variant="pop" delay={200} className="soft-float [animation-delay:1.2s]">

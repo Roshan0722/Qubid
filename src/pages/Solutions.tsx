@@ -148,7 +148,7 @@ export default function Solutions() {
         </Container>
       </section>
 
-      {/* OUTCOMES — dark band */}
+      {/* OUTCOMES  dark band */}
       <section className="bg-navy py-16 sm:py-20 lg:py-24">
         <Container>
           <div className="max-w-[540px]">

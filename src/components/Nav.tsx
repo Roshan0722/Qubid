@@ -41,7 +41,7 @@ export default function Nav({ route = "/" }: { route?: string }) {
           scrolled ? "lift" : "",
         )}
       >
-        {/* scroll progress — hairline green fill */}
+        {/* scroll progress  hairline green fill */}
         <span
           aria-hidden
           className="pointer-events-none absolute bottom-[3px] left-[32px] right-[32px] h-[2px] overflow-hidden rounded-full"

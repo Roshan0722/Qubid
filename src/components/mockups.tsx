@@ -421,7 +421,7 @@ export function ShotStudio() {
         <div className="space-y-2.5 p-3">
           <div className="flex items-center justify-between gap-2">
             <p className="mock-row text-[11px] font-medium text-navy">
-              Section 3 — Method Statement
+              Section 3  Method Statement
             </p>
             <span
               style={{ animationDelay: "600ms" }}

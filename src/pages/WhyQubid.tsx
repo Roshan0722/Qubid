@@ -61,7 +61,7 @@ const DIFFS = [
   {
     n: "01",
     t: "Built on UK procurement",
-    d: "Qubid understands CPV codes, lots, frameworks, DPS and the 2023 Procurement Act — not a generic assistant with a prompt bolted on.",
+    d: "Qubid understands CPV codes, lots, frameworks, DPS and the 2023 Procurement Act  not a generic assistant with a prompt bolted on.",
   },
   {
     n: "02",
@@ -311,7 +311,7 @@ export default function WhyQubid() {
         </Container>
       </section>
 
-      {/* DIFFERENTIATORS — dark band */}
+      {/* DIFFERENTIATORS  dark band */}
       <section className="bg-navy py-16 sm:py-20 lg:py-24">
         <Container>
           <div className="max-w-[560px]">

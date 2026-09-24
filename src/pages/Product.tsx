@@ -73,7 +73,7 @@ export default function Product() {
             From notice to <G>submission</G>
           </>
         }
-        sub="Qubid covers the whole UK bid workflow: discovery, requirement analysis, drafting, compliance and deadlines — in one flat, fast workspace."
+        sub="Qubid covers the whole UK bid workflow: discovery, requirement analysis, drafting, compliance and deadlines  in one flat, fast workspace."
         crumbs={[{ label: "Home", href: "#/" }, { label: "Product" }]}
       >
         <Reveal delay={320} variant="pop" className="mt-12 rounded-xl border border-hair bg-bgalt p-3 lift sm:p-6">
@@ -196,7 +196,7 @@ export default function Product() {
               </h2>
               <p className="mt-4 max-w-[400px] text-[15px] leading-relaxed text-ink/80">
                 Alerts arrive, requirements are extracted, drafts are written and
-                deadlines are owned — all without leaving Qubid.
+                deadlines are owned  all without leaving Qubid.
               </p>
               <ul className="mt-8 space-y-3">
                 {[

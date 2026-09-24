@@ -20,7 +20,7 @@ const FEATURED: Post = {
   tag: "Playbook",
   type: "Playbook",
   title: "The UK bid desk playbook: from portal alert to submitted response",
-  d: "A step-by-step walkthrough of how a two-person bid team runs four frameworks at once — including the review gates, the evidence library structure and the deadline rhythm that keeps submissions on time.",
+  d: "A step-by-step walkthrough of how a two-person bid team runs four frameworks at once  including the review gates, the evidence library structure and the deadline rhythm that keeps submissions on time.",
   meta: "24 min read · Updated February 2026",
   img: "https://images.pexels.com/photos/7691694/pexels-photo-7691694.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
 };
@@ -93,7 +93,7 @@ export default function Resources() {
             Guides, templates and <G>playbooks</G>
           </>
         }
-        sub="Practical material from the Qubid bid desk — the same frameworks, word limits and evidence structures we use with customers every week."
+        sub="Practical material from the Qubid bid desk  the same frameworks, word limits and evidence structures we use with customers every week."
         primary="Subscribe to the briefing"
         secondary="See pricing"
         primaryHref="#/sign-up"

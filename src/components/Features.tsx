@@ -23,7 +23,7 @@ export default function Features() {
       <Container>
         <SectionHead
           eyebrow="The Platform"
-          sub="Two products, one workspace — from the first notice you see to the file you submit."
+          sub="Two products, one workspace  from the first notice you see to the file you submit."
         >
           Everything you need to <G>bid better</G>
         </SectionHead>

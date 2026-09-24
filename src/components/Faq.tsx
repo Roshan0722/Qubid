@@ -27,7 +27,7 @@ const DATA: Record<string, { q: string; a: string }[]> = {
   "Tender Search": [
     {
       q: "Which portals do you index?",
-      a: "Find a Tender, Contracts Finder, Sell2Wales, Public Contracts Scotland, eTendersNI and Crown Commercial frameworks — plus selected buyer-side systems.",
+      a: "Find a Tender, Contracts Finder, Sell2Wales, Public Contracts Scotland, eTendersNI and Crown Commercial frameworks  plus selected buyer-side systems.",
     },
     {
       q: "How quickly do new notices appear?",
