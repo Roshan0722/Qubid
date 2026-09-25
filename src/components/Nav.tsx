@@ -74,7 +74,7 @@ export default function Nav({ route = "/" }: { route?: string }) {
           </ul>
 
           <div className="flex items-center gap-1.5">
-            <button
+            {/* <button
               aria-label="Search"
               className="hidden h-8 w-8 items-center justify-center rounded-full text-ink transition-colors hover:bg-bgalt hover:text-navy sm:inline-flex"
             >
@@ -82,7 +82,7 @@ export default function Nav({ route = "/" }: { route?: string }) {
                 <circle cx="7" cy="7" r="4.6" stroke="currentColor" strokeWidth="1.4" />
                 <path d="M10.6 10.6L14 14" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
               </svg>
-            </button>
+            </button> */}
             <a
               href="#/sign-in"
               className={cn(
@@ -92,8 +92,8 @@ export default function Nav({ route = "/" }: { route?: string }) {
             >
               Sign In
             </a>
-            <Btn variant="green" href="#/sign-up" className="hidden sm:inline-flex">
-              Try for Free
+            <Btn variant="green" href="#/enquire" className="hidden sm:inline-flex">
+              Enquire Now
             </Btn>
             <button
               aria-label="Menu"
@@ -141,8 +141,8 @@ export default function Nav({ route = "/" }: { route?: string }) {
                 <Btn variant="white" href="#/sign-in" className="flex-1">
                   Sign In
                 </Btn>
-                <Btn variant="green" href="#/sign-up" className="flex-1">
-                  Try for Free
+                <Btn variant="green" href="#/enquire" className="flex-1">
+                  Enquire Now
                 </Btn>
               </div>
             </div>

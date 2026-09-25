@@ -8,6 +8,7 @@ import Resources from "./pages/Resources";
 import Pricing from "./pages/Pricing";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import Enquire from "./pages/Enquire";
 import { useHashRoute } from "./hooks/useHashRoute";
 
 const PAGES: Record<string, React.ComponentType> = {
@@ -18,6 +19,7 @@ const PAGES: Record<string, React.ComponentType> = {
   "/pricing": Pricing,
   "/sign-in": SignIn,
   "/sign-up": SignUp,
+  "/enquire": Enquire,
 };
 
 export default function App() {
